@@ -1,4 +1,4 @@
-import React, { Component } from 'react' ;
+import React from 'react' ;
 import "./ContactMenu" ;
 import ContactMenu from './ContactMenu';
 import "../styles/contact.css" ;

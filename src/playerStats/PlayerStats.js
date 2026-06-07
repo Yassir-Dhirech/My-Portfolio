@@ -1,4 +1,3 @@
-import react from 'react';
 import "../styles/playerStats.css";
 
 const PlayerStats = () => {
