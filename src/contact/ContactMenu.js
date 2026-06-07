@@ -33,9 +33,12 @@ export default function ContactMenu() {
     setIsLoading(true);
     const {name,email,message} = formData;
     const templateParams = {
-        name: "name :"+ DOMPurify.sanitize(name),
-        email: "Email :"+DOMPurify.sanitize(email),
-        message: "message :"+DOMPurify.sanitize(message),
+        name: DOMPurify.sanitize(name),
+        from_name: DOMPurify.sanitize(name),
+        email: DOMPurify.sanitize(email),
+        from_email: DOMPurify.sanitize(email),
+        message: DOMPurify.sanitize(message),
+        group: "contact",
     };
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
