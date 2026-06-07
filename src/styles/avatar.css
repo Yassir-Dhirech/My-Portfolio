@@ -1,0 +1,46 @@
+.avatar{
+    position: fixed;
+    overflow: hidden;
+    z-index : -2;
+    
+}
+
+.avatar.about{
+    height : 89vh;
+    bottom : -8vh;
+    left : 50%;
+    transform : translateX(-50%);
+}
+
+.avatar.skills{
+    height : 190vh;
+    bottom : -110vh;
+    left : -1.5rem;
+    transform : translateX(0%) scaleX(-1);
+}
+
+.shadow-overlay-skills{
+    position : fixed;
+    display : block;
+    width : 100%;
+    height : 100%;
+    background-color: linear-gradient(90deg,
+     rgba(0, 0, 0, 0.25), rgba(255,255,255 , 0));
+    z-index : -1;
+}
+
+@media (max-width : 1100px){
+    .avatar.about{
+        z-index : -5;
+        height : 95vh;
+        bottom : -12vh;
+    }
+
+    .avatar.skills{
+        z-index : -5;
+        height : 200vh;
+        bottom : -120vh;
+        left : 50%;
+        transform : translateX(-50%) scaleX(-1);
+    }
+}
