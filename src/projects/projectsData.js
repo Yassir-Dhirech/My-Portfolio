@@ -4,46 +4,54 @@ import projectThree from "../assets/project-3.png"
 
 const projects = {
     1:{
-        title:"ADEI Official Website",
+        title:"ADEI ENSA Fès — Student Platform",
         image: projectOne,
         description : (
             <>
             <p>
-                decription11111111111111111111111111111111111
+                Centralised platform for 1,800+ students at ENSA Fès. I came up with
+                the idea, defined the scope, and co-developed it. Academic tracks,
+                student clubs, club president accounts, class rep accounts, and a
+                feedback system — all in one place.
             </p>
             </>
         ),
-        github: "https://github.com",
-        demo: "https://github.com"
+        github: "https://github.com/Yassir-Dhirech",
+        demo: "https://adei-ensaf.ma"
 
     },
     2:{
-        title:"Rotaract ensaf Official Website",
+        title:"Rotaract Club ENSA Fès — Club Platform",
         image: projectTwo,
         description : (
             <>
             <p>
-                decription11111111111111111111111111111111111
+                Built solo from wireframes to deployment. Not just a showcase —
+                    a platform the team uses daily. Event management, project gallery,
+                    team directory, donation info, bilingual FR/EN, and an admin
+                    interface to update content without touching code.
             </p>
             </>
         ),
-        github: "https://github.com",
-        demo: "https://github.com"
+        github: "https://github.com/Yassir-Dhirech",
+        demo: "https://rotaract-club.adei-ensaf.ma"
 
     },
     3:{
-        title:"getions Official Website",
+        title:"Job Search Platform — ENSA Fès",
         image: projectThree,
         description : (
             <>
             <p>
-                decription11111111111111111111111111111111111
+                Web platform centralising job offers and CV management for
+                candidates and recruiters. Built with .NET MVC — CV uploads,
+                job posting, tracking, and role-based authentication.
+                Collaborative academic project validated by supervising professor.
             </p>
             </>
         ),
-        github: "https://github.com",
-        demo: "https://github.com"
-
+        github: "https://github.com/Yassir-Dhirech",
+        demo: null
     }
 }
 

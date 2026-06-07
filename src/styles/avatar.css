@@ -8,13 +8,13 @@
 .avatar.about{
     height : 89vh;
     bottom : -8vh;
-    left : 50%;
+    left : 48%;
     transform : translateX(-50%);
 }
 
 .avatar.skills{
-    height : 190vh;
-    bottom : -110vh;
+    height : 160vh;
+    bottom : -70vh;
     left : -1.5rem;
     transform : translateX(0%) scaleX(-1);
 }

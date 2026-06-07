@@ -4,8 +4,9 @@
     display: flex;
     flex-direction: column;
     top : 60%;
-    transform: translateY(-60%);
-    left : 10vw;
+    transform: translateY(-50%);
+    left : 15vw;
+    
 }
 
 .item{
@@ -19,7 +20,6 @@
 .title{
     font-size: 1rem;
     padding-right: 2.5rem;
-
 }
 
 .item.active .title{
@@ -27,13 +27,13 @@
 }
 
 .sub-container{
-    width: 18.5rem;
+    width: 25rem;
     position: fixed;
     display:flex;
     flex-direction: column;
     top : 32%;
     right : 10vw;
-    cursor: pointer;
+    cursor: default;
 }
 
 .active-subheading{
@@ -61,6 +61,7 @@
 .sub-container-2.active-subheading h3,
 .sub-container-3.active-subheading h3{
     border-radius: var(--radius-left);
+    
 }
 
 .sub-container-1.active-subheading h3{
@@ -111,8 +112,13 @@
 }
 
 @media (max-width : 1100px) {
+    .menu{
+        left: 10vh;
+    }
+
     .sub-container{
         right: 1rem;
+        width :18rem;
     } 
     .item.active .title {
         font-size: 1rem;
@@ -128,12 +134,12 @@
         top : 50%;
         left: 50%;
         transform: translateX(-50%);
-
     }
     
     .title{
         font-size: 0.8rem;
         padding-right: 2.5rem;
+        border-radius: var(--radius-right);
     }
 
     .active-subheading .p-container{
@@ -141,7 +147,7 @@
 
     }
 
-    .icon-title-container .icon{
+    .icon-title-container {
         display:none;
 
     }
