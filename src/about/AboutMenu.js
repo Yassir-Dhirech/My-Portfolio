@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AboutMenuItem from './AboutMenuItem';
 import AboutSubHeading from './AboutSubHeading';
 import SubheadingData from './SubHeadingData';
+import '../styles/AboutMenu.css';
 import personalIcon from '../assets/moebius-triangle.png';
 import educationalIcon from '../assets/upgrade.png';
 import careerIcon from '../assets/triple-corn.png';
@@ -40,7 +41,7 @@ export default class AboutMenu extends Component {
 
 
     return (<>
-      <div className='menu'>
+      <div className='menu about-menu'>
         {menuItems.map((item,index) => (
         <AboutMenuItem 
         key={index}
