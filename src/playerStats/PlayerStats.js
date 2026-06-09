@@ -1,7 +1,10 @@
 import "../styles/playerStats.css";
-
+import CV from "../assets/YASSIR_Dhirech_CV.pdf";
+import DownloadImg from "../assets/telecharger.png";
 const PlayerStats = () => {
     return (
+        <>
+        
         <div id="playerStats">
             <h1>DHIRECH Yassir</h1>
             <div id="playerStats__lines">
@@ -10,6 +13,10 @@ const PlayerStats = () => {
             </div>
             <h2>Future Computer Science Engineer</h2>
         </div>
+        <a id="Button-CV" href={CV} download="Yassir_DHIRECH_CV">
+            <img src={DownloadImg} href={DownloadImg}/>
+            <p>Download CV</p> </a>
+        </>
     );
 };
 

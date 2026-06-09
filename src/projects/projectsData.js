@@ -16,7 +16,7 @@ const projects = {
             </p>
             </>
         ),
-        github: "https://github.com/Yassir-Dhirech",
+        github: "https://github.com/adeiensafes/ADEI-Website",
         demo: "https://adei-ensaf.ma"
 
     },
@@ -33,13 +33,13 @@ const projects = {
             </p>
             </>
         ),
-        github: "https://github.com/Yassir-Dhirech",
+        github: "https://github.com/Yassir-Dhirech/-rotaract-webiste",
         demo: "https://rotaract-club.adei-ensaf.ma"
 
     },
     3:{
         title:"Job Search Platform — ENSA Fès",
-        image: projectThree,
+        image: "",
         description : (
             <>
             <p>
