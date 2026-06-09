@@ -2,6 +2,7 @@
     position: fixed;
     overflow: hidden;
     z-index : -2;
+    user-select: none;
     
 }
 
