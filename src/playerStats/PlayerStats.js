@@ -14,7 +14,7 @@ const PlayerStats = () => {
             <h2>Future Computer Science Engineer</h2>
         </div>
         <a id="Button-CV" href={CV} download="Yassir_DHIRECH_CV">
-            <img src={DownloadImg} href={DownloadImg}/>
+            <img src={DownloadImg} href={DownloadImg} alt=""/>
             <p>Download CV</p> </a>
         </>
     );
