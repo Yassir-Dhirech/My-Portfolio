@@ -10,7 +10,8 @@ import './styles/app.css';
 import Background from './background/Background.js';
 import PlayerStats from './playerStats/PlayerStats.js';
 import { useState , useEffect } from 'react';
-import LoadingScreen from "./compenents/LoadingScreen.js"
+import LoadingScreen from "./compenents/LoadingScreen.js";
+import { lazy, Suspense } from "react";
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
 
   return (
     <Router>
+      <Suspense fallback={<div>Loading...</div>}/>
       <Nav />
       <Background />
       <Routes>

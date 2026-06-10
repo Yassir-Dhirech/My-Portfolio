@@ -34,6 +34,8 @@ const projects = {
             </p>
             </>
         ),
+        stack:["Java","React.js","Node.js"],
+        live:true,
         github: "https://github.com/Yassir-Dhirech/-rotaract-webiste",
         demo: "https://rotaract-club.adei-ensaf.ma"
 
@@ -51,6 +53,8 @@ const projects = {
             </p>
             </>
         ),
+        stack:["Java","React.js","Node.js"],
+        live:false,
         github: "https://github.com/Yassir-Dhirech",
         demo: null
     }
