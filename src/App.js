@@ -9,8 +9,19 @@ import './styles/nav.css';
 import './styles/app.css';
 import Background from './background/Background.js';
 import PlayerStats from './playerStats/PlayerStats.js';
+import { useState , useEffect } from 'react';
+import LoadingScreen from "./compenents/LoadingScreen.js"
+
 
 const App = () => {
+  const [isLoading , setIsLoading] = useState(true);
+  useEffect(()=>{
+    const timer = setTimeout(()=> setIsLoading(false), 2000);
+    return () => clearTimeout(timer);
+  },[]);
+
+  if (isLoading) return <LoadingScreen />
+
   return (
     <Router>
       <Nav />
