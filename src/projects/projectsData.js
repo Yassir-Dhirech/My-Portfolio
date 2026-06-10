@@ -15,6 +15,8 @@ const projects = {
             </p>
             </>
         ),
+        stack:["Java","React.js","Node.js"],
+        live:true,
         github: "https://github.com/adeiensafes/ADEI-Website",
         demo: "https://adei-ensaf.ma"
 

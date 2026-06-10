@@ -2,6 +2,7 @@ import { useState } from "react";
 import projects from "./projectsData";       
 import "../styles/projectMenu.css";
 import arrow from "../assets/right-arrow.png";
+import dot from "../assets/bouton-denregistrement.png"
  
 function wrap(index, length) {
   return (index + length) % length;
@@ -53,7 +54,16 @@ export default function ProjectSlider() {
       </div>
   </div>
   <div className="slider-content">
-    <h2 className="slider-title">{slide.title}</h2>
+    <h2 className="slider-title">
+      {slide.title}
+      <div className="slider-live">
+        {slide.live && (<>
+          <p>Live</p><img src={dot} href={dot} alt="" />
+          </>)}
+      </div>
+    </h2>
+    
+    <div className="slider-stack"></div>
     <div className="slider-description">{slide.description}</div>
     <div className="slider-buttons">
       <a href={slide.github} target="_blank" rel="noreferrer" className="slider-btn slider-btn--ghost">
