@@ -10,12 +10,12 @@ import './styles/app.css';
 import Background from './background/Background.js';
 import PlayerStats from './playerStats/PlayerStats.js';
 import { useState , useEffect } from 'react';
-import LoadingScreen from "./compenents/LoadingScreen.js";
-import { Suspense } from "react";
+// import LoadingScreen from "./compenents/LoadingScreen.js";
+// import { /*Suspense*/} from "react";
 
 
 const App = () => {
-  const [isLoading , setIsLoading] = useState(true);
+  const [/*isLoading */, setIsLoading] = useState(true);
   useEffect(()=>{
     const timer = setTimeout(()=> setIsLoading(false), 10000);
     return () => clearTimeout(timer);
