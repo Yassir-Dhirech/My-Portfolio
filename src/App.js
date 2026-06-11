@@ -17,11 +17,11 @@ import { Suspense } from "react";
 const App = () => {
   const [isLoading , setIsLoading] = useState(true);
   useEffect(()=>{
-    const timer = setTimeout(()=> setIsLoading(false), 2000);
+    const timer = setTimeout(()=> setIsLoading(false), 10000);
     return () => clearTimeout(timer);
   },[]);
 
-  // if (isLoading) return <LoadingScreen />
+   if (isLoading) return <LoadingScreen />
 
   return (
     <Router>
