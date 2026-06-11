@@ -34,48 +34,50 @@ export default function ProjectSlider() {
   }
   return (
     <section className="section">
+      <article className={`slider-card slider-card--${direction}`} key={currentIndex}>
+        <div className="slider-image-wrapper">
+          <img src={slide.image} alt={slide.title} className="slider-image" />
+          <div className="slider-dots" role="tablist">
+            {slidesArray.map((_, i) => (
+              <button
+                key={i}
+                role="tab"
+                aria-selected={i === currentIndex}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`slider-dot ${i === currentIndex ? "slider-dot--active" : ""}`}
+                onClick={() => handleDot(i)}
+              />
+            ))}
+          </div>
+        </div>
 
-        <article className={`slider-card slider-card--${direction}`} key={currentIndex}>
-
- 
-  <div className="slider-image-wrapper">
-    <img src={slide.image} alt={slide.title} className="slider-image" />
-    <div className="slider-dots" role="tablist">
-        {slidesArray.map((_, i) => (
-          <button
-            key={i}
-            role="tab"
-            aria-selected={i === currentIndex}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`slider-dot ${i === currentIndex ? "slider-dot--active" : ""}`}
-            onClick={() => handleDot(i)}
-          />
-        ))}
-      </div>
-  </div>
-  <div className="slider-content">
-    <h2 className="slider-title">
-      {slide.title}
-      <div className="slider-live">
-        {slide.live && (<>
-          <p>Live</p><img src={dot} href={dot} alt="" />
-          </>)}
-      </div>
-    </h2>
-    
-    <div className="slider-stack"></div>
-    <div className="slider-description">{slide.description}</div>
-    <div className="slider-buttons">
-      <a href={slide.github} target="_blank" rel="noreferrer" className="slider-btn slider-btn--ghost">
-        GitHub
-      </a>
-      {slide.demo && (
-        <a href={slide.demo} target="_blank" rel="noreferrer" className="slider-btn slider-btn--primary">
-          Online Website
-        </a>
-      )}
-    </div>
-  </div>
+        <div className="slider-content">
+          <h2 className="slider-title">
+            {slide.title}
+            {slide.live && (
+              <div className="slider-live">
+                <p>Live</p>
+                <img src={dot} alt="live indicator" />
+              </div>
+            )}
+          </h2>
+          <div className="slider-description">{slide.description}</div>
+          <div className="slider-stack">
+            {slide.stack && slide.stack.map((tech, index) => (
+              <span key={index} className="stack-badge">{tech}</span>
+            ))}
+          </div>
+          <div className="slider-buttons">
+            <a href={slide.github} target="_blank" rel="noreferrer" className="slider-btn slider-btn--ghost">
+              GitHub
+            </a>
+            {slide.demo && (
+              <a href={slide.demo} target="_blank" rel="noreferrer" className="slider-btn slider-btn--primary">
+                Online Website
+              </a>
+            )}
+          </div>
+        </div>
 
   <div className="slider-arrows">
     <button className="slider-arrow" onClick={handlePrev} aria-label="Previous project">

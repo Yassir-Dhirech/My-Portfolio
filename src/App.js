@@ -11,7 +11,7 @@ import Background from './background/Background.js';
 import PlayerStats from './playerStats/PlayerStats.js';
 import { useState , useEffect } from 'react';
 import LoadingScreen from "./compenents/LoadingScreen.js";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 
 
 const App = () => {
@@ -21,11 +21,11 @@ const App = () => {
     return () => clearTimeout(timer);
   },[]);
 
-  if (isLoading) return <LoadingScreen />
+  // if (isLoading) return <LoadingScreen />
 
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}/>
+      {/* <Suspense fallback={<div>Loading...</div>}/> */}
       <Nav />
       <Background />
       <Routes>
