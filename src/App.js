@@ -21,7 +21,7 @@ const App = () => {
     return () => clearTimeout(timer);
   },[]);
 
-  if (isLoading) return <LoadingScreen />
+  // if (isLoading) return <LoadingScreen />
 
   return (
     <Router>

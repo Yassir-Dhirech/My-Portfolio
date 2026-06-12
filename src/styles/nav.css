@@ -44,6 +44,8 @@ a{
 
 .nav-link:hover , .nav-link.current{
     opacity : 1;
+    scale: 1.1;
+    transition: 0.2s;
 }
 
 @media (max-width : 1100px){

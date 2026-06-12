@@ -48,7 +48,7 @@ h2{
     display: flex;
     flex-direction: row;
     top : 3rem;
-    right : 10%;
+    right : 5%;
     background: #00d100;
     border-radius: 20px;
 }
@@ -60,13 +60,13 @@ h2{
 #Button-CV:hover img{
     display: block;
     width:1rem ;
-    transition: 0.5s ease-out;
+    transition: 0.2s ease-out;
 }
 
 #Button-CV:hover{
      background: white;
      scale: 1.1;
-     transition: 0.5s ease-out;
+     transition: 0.2s ease-out;
 }
 
 #Button-CV p{
