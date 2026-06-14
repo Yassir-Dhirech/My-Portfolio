@@ -37,10 +37,11 @@ const App = () => {
             window.addEventListener('load', checkReady, { once: true });
         }
     }, []);
+    const [loading, setLoading] = useState(true);
 
     return (
         <Router>
-            <LoadingScreen ready={ready} />
+            {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
             <div style={{ visibility: ready ? 'visible' : 'hidden' }}>
                 <Nav />
                 <Background />

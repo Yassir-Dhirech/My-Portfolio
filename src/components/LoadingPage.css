@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 .loading-wrapper {
     position: fixed;
@@ -66,4 +66,128 @@
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0.4; }
+} */
+
+
+/* loadingScreen.css */
+.ls-root {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: 'Syne', sans-serif;
 }
+
+.ls-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridShift 12s linear infinite;
+}
+@keyframes gridShift {
+  to { background-position: 48px 48px; }
+}
+
+.ls-glow {
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+  animation: glowPulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%       { transform: scale(1.2); opacity: 1; }
+}
+
+.ls-ring-wrap {
+  position: relative;
+  width: 120px; height: 120px;
+  margin-bottom: 2rem;
+}
+.ls-ring {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+}
+.ls-ring-1 {
+  border-top-color: #6366f1;
+  border-right-color: rgba(99,102,241,0.3);
+  animation: spin 1.4s linear infinite;
+}
+.ls-ring-2 {
+  inset: 14px;
+  border-bottom-color: #a5b4fc;
+  border-left-color: rgba(165,180,252,0.3);
+  animation: spin 1.8s linear infinite reverse;
+}
+.ls-ring-3 {
+  inset: 28px;
+  border-top-color: rgba(99,102,241,0.5);
+  animation: spin 2.2s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.ls-center-dot {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #6366f1;
+  animation: dotPulse 1.4s ease-in-out infinite;
+}
+@keyframes dotPulse {
+  0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 1; }
+  50%       { transform: translate(-50%,-50%) scale(1.6); opacity: 0.5; }
+}
+
+.ls-name {
+  font-size: 28px; font-weight: 800;
+  color: #fff; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.ls-name span { color: #6366f1; }
+
+.ls-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; color: rgba(255,255,255,0.35);
+  letter-spacing: 0.22em; text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.ls-bar-wrap {
+  width: 220px; height: 2px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 2px; overflow: hidden;
+}
+.ls-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #a5b4fc);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.ls-status {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; color: rgba(255,255,255,0.25);
+  letter-spacing: 0.15em; margin-top: 12px;
+}
+
+.ls-corner {
+  position: absolute;
+  width: 18px; height: 18px;
+  opacity: 0.2;
+}
+.ls-corner-tl { top: 24px; left: 24px; border-top: 1px solid #6366f1; border-left: 1px solid #6366f1; }
+.ls-corner-tr { top: 24px; right: 24px; border-top: 1px solid #6366f1; border-right: 1px solid #6366f1; }
+.ls-corner-bl { bottom: 24px; left: 24px; border-bottom: 1px solid #6366f1; border-left: 1px solid #6366f1; }
+.ls-corner-br { bottom: 24px; right: 24px; border-bottom: 1px solid #6366f1; border-right: 1px solid #6366f1; }
