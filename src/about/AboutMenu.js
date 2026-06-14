@@ -40,6 +40,7 @@ export default class AboutMenu extends Component {
     const subheadings = SubheadingData[activeMenuItem];
 
 
+    
     return (<>
       <div className='menu about-menu'>
         {menuItems.map((item,index) => (

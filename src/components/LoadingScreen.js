@@ -12,5 +12,4 @@ const LoadingScreen = ({ ready }) => {
         </div>
     );
 };
-
 export default LoadingScreen;
