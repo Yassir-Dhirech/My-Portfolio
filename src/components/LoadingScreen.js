@@ -15,12 +15,18 @@
 // export default LoadingScreen;
 
 // LoadingScreen.jsx
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function LoadingScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
+  const progressRef = useRef(0);
+  const onCompleteRef = useRef(onComplete);
+
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
 
   useEffect(() => {
     const steps = [
@@ -29,25 +35,39 @@ export default function LoadingScreen({ onComplete }) {
       { target: 100, delay: 1300, duration: 300 },
     ];
 
+    const timeouts = [];
+
     steps.forEach(({ target, delay, duration }) => {
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
         const start = Date.now();
-        const from = progress;
+        const from = progressRef.current;
         const tick = () => {
           const elapsed = Date.now() - start;
           const t = Math.min(elapsed / duration, 1);
-          setProgress(Math.round(from + (target - from) * t));
+          const nextProgress = Math.round(from + (target - from) * t);
+          progressRef.current = nextProgress;
+          setProgress(nextProgress);
           if (t < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
       }, delay);
+
+      timeouts.push(timeout);
     });
 
-    const total = 1600 + 600; // loading + exit delay
-    setTimeout(() => {
+    const completionTimeout = setTimeout(() => {
       setVisible(false);
-      setTimeout(onComplete, 600);
-    }, total);
+      const finalTimeout = setTimeout(() => {
+        onCompleteRef.current();
+      }, 600);
+      timeouts.push(finalTimeout);
+    }, 1600 + 600);
+
+    timeouts.push(completionTimeout);
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
   }, []);
 
   return (
