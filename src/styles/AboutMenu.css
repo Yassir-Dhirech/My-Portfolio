@@ -148,9 +148,16 @@
     .active-subheading h3{
         font-size: 1.25rem;
     }
-    .subheading h3{
-        font-size: 1.5rem;
-        background: white;
+    .sub-container-1 h3,
+    .sub-container-2 h3,
+    .sub-container-3 h3 {
+        font-size: 1.1rem; 
+        background: #ffffff50 ;
+        border-radius: 25px 0 0 25px;
+    }
+    
+    .active-subheading h3{
+        font-size: 1.25rem;
     }
 
     .icon-title-container {
