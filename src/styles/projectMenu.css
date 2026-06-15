@@ -237,7 +237,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     max-width: 90vw;
-    max-height: none;
+    height: 70%;
     padding: 20px;
     gap: 16px;
   }
@@ -254,8 +254,12 @@
   }
 
   .slider-arrows {
-    grid-column: 1;
-    grid-row: 3;
+    position: fixed;
+    bottom: 15%;  /* Position below the card */
+    left: 50%;
+    transform: translateX(-50%);
+    grid-column: auto;  /* Remove grid positioning */
+    grid-row: auto;
     justify-content: center;
   }
 
