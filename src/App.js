@@ -26,7 +26,6 @@ const App = () => {
             });
 
             Promise.all([fontsDone, videoReady]).then(() => {
-                // small delay so fade-out feels smooth
                 setTimeout(() => setReady(true), 300);
             });
         };
