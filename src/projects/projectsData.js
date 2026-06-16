@@ -1,5 +1,6 @@
 import projectOne from "../assets/project-1.png"
 import projectTwo from "../assets/project-2.png"
+import projectThree from "../assets/project-3.jpeg"
 
 const projects = {
     1:{
@@ -42,7 +43,7 @@ const projects = {
     },
     3:{
         title:"Job Search Platform — ENSA Fès",
-        image: "",
+        image: projectThree,
         description : (
             <>
             <p>
