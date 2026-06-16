@@ -22,7 +22,7 @@ const projects = {
 
     },
     2:{
-        title:"Rotaract Club ENSA Fès — Club Platform",
+        title:"Rotaract ENSA Fès — Club Platform",
         image: projectTwo,
         description : (
             <>

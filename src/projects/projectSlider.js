@@ -50,7 +50,6 @@ export default function ProjectSlider() {
             ))}
           </div>
         </div>
-
         <div className="slider-content">
           <h2 className="slider-title">
             {slide.title}
@@ -79,6 +78,8 @@ export default function ProjectSlider() {
           </div>
         </div>
 
+</article>
+ 
   <div className="slider-arrows">
     <button className="slider-arrow" onClick={handlePrev} aria-label="Previous project">
       <img src={arrow} alt="prev" style={{ width: 16, height: 16, filter: "invert(1)", transform: "rotate(180deg)" }} />
@@ -87,10 +88,6 @@ export default function ProjectSlider() {
       <img src={arrow} alt="next" style={{ width: 16, height: 16, filter: "invert(1)" }} />
     </button>
   </div>
-
-</article>
- 
- 
       
 
     </section>
