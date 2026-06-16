@@ -240,7 +240,7 @@
     bottom: 20%;
     left: 10%;
     right: 10%;
-    min-height: 70%;
+    min-height: 100%;
     height: auto;
     gap: 0;
   }
@@ -262,7 +262,6 @@
     width: 90%;
     display:block;
     position:relative;
-    top:-10%;
     margin: 0px auto;
   }
 
@@ -279,7 +278,6 @@
     padding: 0% 1rem;
     font-size: 0.9rem;
     justify-content: center;
-    top: -10%;
     margin-bottom: 0rem;
     height: 1rem;
   }
