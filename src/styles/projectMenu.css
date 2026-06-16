@@ -240,8 +240,7 @@
     bottom: 20%;
     left: 10%;
     right: 10%;
-    min-height: 100%;
-    height: auto;
+    min-height: 85%;
     gap: 0;
   }
 
@@ -253,13 +252,13 @@
     justify-content: center;
     padding: 0px;
     gap: 5px 32px;
-
     overflow: hidden;
   }
 
   .slider-image-wrapper {
     height: 9rem;
     width: 90%;
+    top: 0;
     display:block;
     position:relative;
     margin: 0px auto;
@@ -270,7 +269,7 @@
     height: 40%;
     align-items: center;
     justify-content: center;
-        gap: 0;
+    gap: 0;
 
   }
   .slider-title {
