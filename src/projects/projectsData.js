@@ -56,7 +56,7 @@ const projects = {
         ),
         stack:[".Net","C#","CSS"],
         live:false,
-        github: "https://github.com/Yassir-Dhirech",
+        github: "https://github.com/Yassir-Dhirech/GestionnaireCondidature",
         demo: null
     }
 }
