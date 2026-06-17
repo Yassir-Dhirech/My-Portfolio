@@ -346,7 +346,9 @@
     align-items: center;
     justify-content: center;
         margin-bottom: 2rem;
+        display: none;
   }
+
  .slider-arrows {
   position: relative;
   bottom: auto;
