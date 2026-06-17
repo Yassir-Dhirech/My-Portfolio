@@ -17,20 +17,25 @@ export default function ProjectSlider() {
   const [direction, setDirection]       = useState("next"); 
  
   const slide = slidesArray[currentIndex];
+  const [showDesc, setShowDesc] = useState(false);
  
   function handlePrev() {
     setDirection("prev");
     setCurrentIndex((prev) => wrap(prev - 1, slidesArray.length));
+      setShowDesc(false);
   }
  
   function handleNext() {
     setDirection("next");
     setCurrentIndex((prev) => wrap(prev + 1, slidesArray.length));
+      setShowDesc(false);
   }
  
   function handleDot(i) {
     setDirection(i > currentIndex ? "next" : "prev");
     setCurrentIndex(i);
+    setShowDesc(false);
+
   }
   return (
     <section className="section">
@@ -61,11 +66,18 @@ export default function ProjectSlider() {
             )}
           </h2>
           <div className="slider-description">{slide.description}</div>
-          <div className="slider-stack">
+          <button className="desc-toggle" onClick={() => setShowDesc(p => !p)}>
+            {showDesc ? "Hide details ▲" : "See details ▼"}
+          </button>
+          <div className={`slider-description-mobile ${showDesc ? "desc-open" : ""}`}>
+            {slide.description}
+            <div className="slider-stack">
             {slide.stack && slide.stack.map((tech, index) => (
               <span key={index} className="stack-badge">{tech}</span>
             ))}
           </div>
+          </div>  
+          
           <div className="slider-buttons">
             <a href={slide.github} target="_blank" rel="noreferrer" className="slider-btn slider-btn--ghost">
               GitHub
